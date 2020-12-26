@@ -40,7 +40,7 @@ def run_sunday():
     print(command)
     if 'youtube' in command:
         command = command.replace('youtube','')
-        talk("Playing " + command)
+        talk("Đang bật " + command)
         print("final : "+command)
         pywhatkit.playonyt(command)
     if 'google' in command:

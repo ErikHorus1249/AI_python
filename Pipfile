@@ -8,6 +8,7 @@ speechrecognition = "*"
 pyttsx3 = "*"
 pyaudio = "*"
 pywhatkit = "*"
+google-assistant-library = "*"
 
 [dev-packages]
 
