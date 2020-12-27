@@ -2,18 +2,19 @@ import speech_recognition as sr
 import pyttsx3
 import pywhatkit
 
-listener=sr.Recognizer()
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
-engine.setProperty('voice',voices[64].id)
+listener=sr.Recognizer() # tao ra de lang nghe am thanh tu nguoi dung
+engine = pyttsx3.init() # khoi tao giong noi
+voices = engine.getProperty('voices') # lay thong tin cac giong noi 
+engine.setProperty('voice',voices[64].id) 
 engine.setProperty('rate', 160)    # Speed percent (can go over 100)
 engine.setProperty('volume', 0.9)  # Volume 0-1
 
-
+# de noi
 def talk(text):
     engine.say(text)
     engine.runAndWait()
 
+# lay lenh tu cau noi
 def take_command():
     with sr.Microphone() as source:
         listener.adjust_for_ambient_noise(source,duration=1)
@@ -49,17 +50,8 @@ def run_sunday():
         pywhatkit.search(command)
 
 if __name__ == "__main__":
-    run_sunday()
-    # talk("thằng hưng ăn cứt đi em")
-    # voices = engine.getProperty('voices')
-    # count = 0
-    # for voice in voices:
-    #     print(count)
-    #     print("Voice:")
-    #     print(" - ID: %s" % voice.id)
-    #     print(" - Name: %s" % voice.name)
-    #     print(" - Languages: %s" % voice.languages)
-    #     print(" - Gender: %s" % voice.gender)
-    #     print(" - Age: %s" % voice.age)
-    #     count += 1
+    engine.say("xin chào huy con cho")
+    engine.runAndWait()
+    # run_sunday()
+    
    
