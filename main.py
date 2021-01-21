@@ -41,7 +41,7 @@ def run_sunday():
     print(command)
     if 'youtube' in command:
         command = command.replace('youtube','')
-        talk("Đang bật " + command)
+        talk("Open " + command)
         print("final : "+command)
         pywhatkit.playonyt(command)
     if 'google' in command:
@@ -50,8 +50,9 @@ def run_sunday():
         pywhatkit.search(command)
 
 if __name__ == "__main__":
-    engine.say("xin chào huy con cho")
-    engine.runAndWait()
-    # run_sunday()
+    run_sunday()
+    # engine.say("xin chào huy con cho")
+    # engine.runAndWait()
+    
     
    
